@@ -36,13 +36,18 @@ namespace BTL_QLNhaTro
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.lbPassword = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.txtTenNhanVien = new System.Windows.Forms.TextBox();
-            this.lbTenNhanVien = new System.Windows.Forms.Label();
-            this.txtMaNhanVien = new System.Windows.Forms.TextBox();
-            this.lbMaNhanVien = new System.Windows.Forms.Label();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.lbUsername = new System.Windows.Forms.Label();
             this.pictureBoxSignUp = new System.Windows.Forms.PictureBox();
             this.errorProviderSignUp = new System.Windows.Forms.ErrorProvider(this.components);
             this.linkLogin = new System.Windows.Forms.LinkLabel();
+            this.txtFullName = new System.Windows.Forms.TextBox();
+            this.lbFullName = new System.Windows.Forms.Label();
+            this.lbGender = new System.Windows.Forms.Label();
+            this.lbDOB = new System.Windows.Forms.Label();
+            this.dtpDOB = new System.Windows.Forms.DateTimePicker();
+            this.rdoMale = new System.Windows.Forms.RadioButton();
+            this.rdoFemale = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSignUp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderSignUp)).BeginInit();
             this.SuspendLayout();
@@ -51,10 +56,10 @@ namespace BTL_QLNhaTro
             // 
             this.btnSignUp.AutoSize = true;
             this.btnSignUp.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSignUp.Location = new System.Drawing.Point(256, 333);
-            this.btnSignUp.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSignUp.Location = new System.Drawing.Point(351, 468);
+            this.btnSignUp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSignUp.Name = "btnSignUp";
-            this.btnSignUp.Size = new System.Drawing.Size(74, 23);
+            this.btnSignUp.Size = new System.Drawing.Size(99, 28);
             this.btnSignUp.TabIndex = 19;
             this.btnSignUp.Text = "Đăng ký";
             this.btnSignUp.UseVisualStyleBackColor = false;
@@ -63,84 +68,66 @@ namespace BTL_QLNhaTro
             // lbConfirmPassword
             // 
             this.lbConfirmPassword.AutoSize = true;
-            this.lbConfirmPassword.Location = new System.Drawing.Point(161, 300);
-            this.lbConfirmPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbConfirmPassword.Location = new System.Drawing.Point(215, 428);
             this.lbConfirmPassword.Name = "lbConfirmPassword";
-            this.lbConfirmPassword.Size = new System.Drawing.Size(113, 13);
+            this.lbConfirmPassword.Size = new System.Drawing.Size(148, 17);
             this.lbConfirmPassword.TabIndex = 18;
             this.lbConfirmPassword.Text = "Xác nhận lại mật khẩu";
             // 
             // txtConfirmPassword
             // 
-            this.txtConfirmPassword.Location = new System.Drawing.Point(302, 297);
-            this.txtConfirmPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(403, 425);
+            this.txtConfirmPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
-            this.txtConfirmPassword.Size = new System.Drawing.Size(138, 20);
+            this.txtConfirmPassword.Size = new System.Drawing.Size(183, 22);
             this.txtConfirmPassword.TabIndex = 17;
             this.txtConfirmPassword.UseSystemPasswordChar = true;
+            this.txtConfirmPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtConfirmPassword_Validating);
             // 
             // lbPassword
             // 
             this.lbPassword.AutoSize = true;
-            this.lbPassword.Location = new System.Drawing.Point(161, 262);
-            this.lbPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbPassword.Location = new System.Drawing.Point(215, 381);
             this.lbPassword.Name = "lbPassword";
-            this.lbPassword.Size = new System.Drawing.Size(52, 13);
+            this.lbPassword.Size = new System.Drawing.Size(66, 17);
             this.lbPassword.TabIndex = 16;
             this.lbPassword.Text = "Mật khẩu";
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(302, 259);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPassword.Location = new System.Drawing.Point(403, 378);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(138, 20);
+            this.txtPassword.Size = new System.Drawing.Size(183, 22);
             this.txtPassword.TabIndex = 15;
             this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtPassword_Validating);
             // 
-            // txtTenNhanVien
+            // txtUsername
             // 
-            this.txtTenNhanVien.Location = new System.Drawing.Point(302, 221);
-            this.txtTenNhanVien.Margin = new System.Windows.Forms.Padding(2);
-            this.txtTenNhanVien.Name = "txtTenNhanVien";
-            this.txtTenNhanVien.Size = new System.Drawing.Size(138, 20);
-            this.txtTenNhanVien.TabIndex = 14;
+            this.txtUsername.Location = new System.Drawing.Point(403, 336);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(183, 22);
+            this.txtUsername.TabIndex = 14;
+            this.txtUsername.Validating += new System.ComponentModel.CancelEventHandler(this.txtUsername_Validating);
             // 
-            // lbTenNhanVien
+            // lbUsername
             // 
-            this.lbTenNhanVien.AutoSize = true;
-            this.lbTenNhanVien.Location = new System.Drawing.Point(161, 220);
-            this.lbTenNhanVien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbTenNhanVien.Name = "lbTenNhanVien";
-            this.lbTenNhanVien.Size = new System.Drawing.Size(76, 13);
-            this.lbTenNhanVien.TabIndex = 13;
-            this.lbTenNhanVien.Text = "Tên nhân viên";
-            // 
-            // txtMaNhanVien
-            // 
-            this.txtMaNhanVien.Location = new System.Drawing.Point(302, 180);
-            this.txtMaNhanVien.Margin = new System.Windows.Forms.Padding(2);
-            this.txtMaNhanVien.Name = "txtMaNhanVien";
-            this.txtMaNhanVien.Size = new System.Drawing.Size(138, 20);
-            this.txtMaNhanVien.TabIndex = 12;
-            // 
-            // lbMaNhanVien
-            // 
-            this.lbMaNhanVien.AutoSize = true;
-            this.lbMaNhanVien.Location = new System.Drawing.Point(165, 179);
-            this.lbMaNhanVien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbMaNhanVien.Name = "lbMaNhanVien";
-            this.lbMaNhanVien.Size = new System.Drawing.Size(72, 13);
-            this.lbMaNhanVien.TabIndex = 11;
-            this.lbMaNhanVien.Text = "Mã nhân viên";
+            this.lbUsername.AutoSize = true;
+            this.lbUsername.Location = new System.Drawing.Point(215, 335);
+            this.lbUsername.Name = "lbUsername";
+            this.lbUsername.Size = new System.Drawing.Size(181, 17);
+            this.lbUsername.TabIndex = 13;
+            this.lbUsername.Text = "Tên đăng nhập(Email/SĐT)";
             // 
             // pictureBoxSignUp
             // 
             this.pictureBoxSignUp.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSignUp.Image")));
-            this.pictureBoxSignUp.Location = new System.Drawing.Point(203, 45);
-            this.pictureBoxSignUp.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxSignUp.Location = new System.Drawing.Point(271, 55);
+            this.pictureBoxSignUp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxSignUp.Name = "pictureBoxSignUp";
-            this.pictureBoxSignUp.Size = new System.Drawing.Size(197, 109);
+            this.pictureBoxSignUp.Size = new System.Drawing.Size(263, 134);
             this.pictureBoxSignUp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxSignUp.TabIndex = 10;
             this.pictureBoxSignUp.TabStop = false;
@@ -152,36 +139,107 @@ namespace BTL_QLNhaTro
             // linkLogin
             // 
             this.linkLogin.AutoSize = true;
-            this.linkLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLogin.Location = new System.Drawing.Point(385, 369);
-            this.linkLogin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.linkLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLogin.Location = new System.Drawing.Point(214, 509);
             this.linkLogin.Name = "linkLogin";
-            this.linkLogin.Size = new System.Drawing.Size(93, 16);
+            this.linkLogin.Size = new System.Drawing.Size(99, 17);
             this.linkLogin.TabIndex = 20;
             this.linkLogin.TabStop = true;
             this.linkLogin.Text = "Về Đăng nhập";
             this.linkLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLogin_LinkClicked);
             // 
+            // txtFullName
+            // 
+            this.txtFullName.Location = new System.Drawing.Point(403, 220);
+            this.txtFullName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtFullName.Name = "txtFullName";
+            this.txtFullName.Size = new System.Drawing.Size(183, 22);
+            this.txtFullName.TabIndex = 5;
+            this.txtFullName.Validating += new System.ComponentModel.CancelEventHandler(this.txtFullName_Validating);
+            // 
+            // lbFullName
+            // 
+            this.lbFullName.AutoSize = true;
+            this.lbFullName.Location = new System.Drawing.Point(214, 220);
+            this.lbFullName.Name = "lbFullName";
+            this.lbFullName.Size = new System.Drawing.Size(69, 17);
+            this.lbFullName.TabIndex = 22;
+            this.lbFullName.Text = "Họ và tên";
+            // 
+            // lbGender
+            // 
+            this.lbGender.AutoSize = true;
+            this.lbGender.Location = new System.Drawing.Point(215, 262);
+            this.lbGender.Name = "lbGender";
+            this.lbGender.Size = new System.Drawing.Size(60, 17);
+            this.lbGender.TabIndex = 23;
+            this.lbGender.Text = "Giới tính";
+            // 
+            // lbDOB
+            // 
+            this.lbDOB.AutoSize = true;
+            this.lbDOB.Location = new System.Drawing.Point(214, 301);
+            this.lbDOB.Name = "lbDOB";
+            this.lbDOB.Size = new System.Drawing.Size(71, 17);
+            this.lbDOB.TabIndex = 25;
+            this.lbDOB.Text = "Ngày sinh";
+            // 
+            // dtpDOB
+            // 
+            this.dtpDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDOB.Location = new System.Drawing.Point(406, 301);
+            this.dtpDOB.Name = "dtpDOB";
+            this.dtpDOB.Size = new System.Drawing.Size(183, 22);
+            this.dtpDOB.TabIndex = 26;
+            // 
+            // rdoMale
+            // 
+            this.rdoMale.AutoSize = true;
+            this.rdoMale.Location = new System.Drawing.Point(403, 262);
+            this.rdoMale.Name = "rdoMale";
+            this.rdoMale.Size = new System.Drawing.Size(58, 21);
+            this.rdoMale.TabIndex = 0;
+            this.rdoMale.TabStop = true;
+            this.rdoMale.Text = "Nam";
+            this.rdoMale.UseVisualStyleBackColor = true;
+            // 
+            // rdoFemale
+            // 
+            this.rdoFemale.AutoSize = true;
+            this.rdoFemale.Location = new System.Drawing.Point(539, 260);
+            this.rdoFemale.Name = "rdoFemale";
+            this.rdoFemale.Size = new System.Drawing.Size(47, 21);
+            this.rdoFemale.TabIndex = 1;
+            this.rdoFemale.TabStop = true;
+            this.rdoFemale.Text = "Nữ";
+            this.rdoFemale.UseVisualStyleBackColor = true;
+            // 
             // frmDangKy
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 410);
+            this.ClientSize = new System.Drawing.Size(825, 541);
+            this.Controls.Add(this.rdoFemale);
+            this.Controls.Add(this.dtpDOB);
+            this.Controls.Add(this.rdoMale);
+            this.Controls.Add(this.lbDOB);
+            this.Controls.Add(this.lbGender);
+            this.Controls.Add(this.lbFullName);
+            this.Controls.Add(this.txtFullName);
             this.Controls.Add(this.linkLogin);
             this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.lbConfirmPassword);
             this.Controls.Add(this.txtConfirmPassword);
             this.Controls.Add(this.lbPassword);
             this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtTenNhanVien);
-            this.Controls.Add(this.lbTenNhanVien);
-            this.Controls.Add(this.txtMaNhanVien);
-            this.Controls.Add(this.lbMaNhanVien);
+            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.lbUsername);
             this.Controls.Add(this.pictureBoxSignUp);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmDangKy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormSignUp";
+            this.Text = "Đăng Ký";
+            this.Load += new System.EventHandler(this.frmDangKy_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSignUp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderSignUp)).EndInit();
             this.ResumeLayout(false);
@@ -196,12 +254,17 @@ namespace BTL_QLNhaTro
         private System.Windows.Forms.TextBox txtConfirmPassword;
         private System.Windows.Forms.Label lbPassword;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.TextBox txtTenNhanVien;
-        private System.Windows.Forms.Label lbTenNhanVien;
-        private System.Windows.Forms.TextBox txtMaNhanVien;
-        private System.Windows.Forms.Label lbMaNhanVien;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.Label lbUsername;
         private System.Windows.Forms.PictureBox pictureBoxSignUp;
         private System.Windows.Forms.ErrorProvider errorProviderSignUp;
         private System.Windows.Forms.LinkLabel linkLogin;
+        private System.Windows.Forms.Label lbFullName;
+        private System.Windows.Forms.TextBox txtFullName;
+        private System.Windows.Forms.Label lbGender;
+        private System.Windows.Forms.DateTimePicker dtpDOB;
+        private System.Windows.Forms.Label lbDOB;
+        private System.Windows.Forms.RadioButton rdoFemale;
+        private System.Windows.Forms.RadioButton rdoMale;
     }
 }

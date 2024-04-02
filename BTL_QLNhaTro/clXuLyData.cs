@@ -12,7 +12,7 @@ namespace BTL_QLNhaTro
 {
     class clXuLyData
     {
-        public string constr = ConfigurationManager.ConnectionStrings["db_BanTrangSuc"].ConnectionString;
+        public string constr = ConfigurationManager.ConnectionStrings["db_QLNhaTro"].ConnectionString;
         public SqlConnection conn = new SqlConnection();
         public bool KT_ketNoi()
         {

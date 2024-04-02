@@ -17,7 +17,7 @@ namespace BTL_QLNhaTro
         {
             InitializeComponent();
         }
-        string constr = "Data Source=ADMIN\\SQLEXPRESS;Initial Catalog=QuanLyBanTrangSuc;Integrated Security=True";
+        string constr = ConfigurationManager.ConnectionStrings["db_QLNhaTro"].ConnectionString;
 
         private void linkSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -33,55 +33,35 @@ namespace BTL_QLNhaTro
                 txtUserName.Focus();
                 return false;
             }
-            else if (txtPassword.Text == "")
+            errorProviderCheckLogin.SetError(txtUserName, null);
+            if (txtPassword.Text == "")
             {
                 errorProviderCheckLogin.SetError(txtPassword, "Bạn chưa nhập mật khẩu");
                 txtPassword.Focus();
                 return false;
             }
-            errorProviderCheckLogin.SetError(txtPassword, "");
-            errorProviderCheckLogin.SetError(txtUserName, "");
+            errorProviderCheckLogin.SetError(txtPassword, null);
             return true;
-        }
-        private bool checkEmployeeHaveExists()
-        {
-            using(SqlConnection cnn = new SqlConnection(constr))
-            {
-                SqlDataAdapter da = new SqlDataAdapter($"select * from tblNhanVien where sMaNV='{txtUserName.Text}' and bTTXoa=0", cnn);
-                DataTable tblNhanVien = new DataTable();
-                da.Fill(tblNhanVien);
-                if (tblNhanVien.Rows.Count > 0)
-                {
-                    return true;
-                }
-            }
-            return false;
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (!checkEmployeeHaveExists())
-            {
-                MessageBox.Show("Nhân viên này đã bị vô hiệu hoá!");
-                return;
-            }
             if (checkNullInput())
             {
                 using (SqlConnection cnn = new SqlConnection(constr))
                 {
-                    SqlDataAdapter da = new SqlDataAdapter($"select * from tblTaiKhoan inner join tblNhanVien on tblTaiKhoan.sMaNV = tblNhanVien.sMaNV where tblTaiKhoan.sMaNV = '{txtUserName.Text}' and tblTaiKhoan.sMatKhau = '{txtPassword.Text}' and tblNhanVien.bttXoa=0", cnn);
-                    DataTable tblTaiKhoan = new DataTable();
-                    da.Fill(tblTaiKhoan);
-                    if (tblTaiKhoan.Rows.Count > 0)
+                    SqlDataAdapter da = new SqlDataAdapter($"select * from tblNguoiDung inner join tblChuToa on tblNguoiDung.FK_ChuToa_id = tblChuToa.PK_Id where sTenDangNhap='{txtUserName.Text}' and sMatKhau='{txtPassword.Text}'", cnn);
+                    DataTable tblNguoiDung = new DataTable();
+                    da.Fill(tblNguoiDung);
+                    if (tblNguoiDung.Rows.Count > 0)
                     {
-                        
-                        frmHome formHome = new frmHome(tblTaiKhoan.Rows[0].Field<string>("sTenNV"), tblTaiKhoan.Rows[0].Field<string>("sMaNV"), bool.Parse( tblTaiKhoan.Rows[0]["bVaiTro"].ToString()));
+                        frmHome formHome = new frmHome(tblNguoiDung.Rows[0].Field<string>("sHoTen"), tblNguoiDung.Rows[0].Field<int>("PK_Id"), tblNguoiDung.Rows[0]["sVaiTro"].ToString());
                         this.Visible = false;
                         formHome.ShowDialog();
                         this.Close();
                     }
                     else
                     {
-                        MessageBox.Show("Mã nhân viên hoặc mật khẩu không chính xác!");
+                        MessageBox.Show("Tên đăng nhập hoặc mật khẩu không chính xác!");
                     }
                 }
             }           

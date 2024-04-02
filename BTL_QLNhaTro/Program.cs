@@ -16,8 +16,7 @@ namespace BTL_QLNhaTro
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            /* Application.Run(new frmDangNhap());*/
-            Application.Run(new frmHome("Phạm Anh Phú", "NV004", true));
+            Application.Run(new frmDangNhap());
         }
     }
 }

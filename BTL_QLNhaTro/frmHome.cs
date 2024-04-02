@@ -12,49 +12,39 @@ namespace BTL_QLNhaTro
 {
     public partial class frmHome : Form
     {
-        private string tenNguoiDung;
-        private string maNguoiDung;
-        private bool vaiTro;
-        public frmHome(string ten,string ma,bool vaitro)
+        private string fullName;
+        private string role;
+        private int userId;
+        public frmHome(string full_name,int user_id, string role)
         {
-            tenNguoiDung = ten;
-            maNguoiDung = ma;
-            vaiTro = vaitro;
+            this.fullName = full_name;
+            this.role = role;
+            this.userId = user_id;
+            this.role = role;
             InitializeComponent();
             datSubMenu();
-            lbTenNguoi.Text = "Tên: " + tenNguoiDung;
+            lbFullName.Text = "Tên: " + fullName;
         }
 
         // Thiết lập menu
         private void datSubMenu()
         {
-            pnHoaDonMenu.Visible = false;
+            /*pnHoaDonMenu.Visible = false;
             pnSanPhamMenu.Visible = false;
             pnBaoCaoMenu.Visible = false;
             
-            if (!vaiTro)
+            if (vaiTro=="Khách thuê")
             {
-                btnNhanvien.Visible = false;
+                btnPhongThue.Visible = false;
                 pnHoaDonMenu.Height = 30;
                 btnHoaDonNhap.Visible = false;
                 btnBaoCao.Visible = false;
-            }
+            }*/
         }
 
         private void anSubMenu()
         {
-            if(pnHoaDonMenu.Visible== true)
-            {
-                pnHoaDonMenu.Visible = false;
-            }
-            if (pnSanPhamMenu.Visible == true)
-            {
-                pnSanPhamMenu.Visible = false;
-            }
-            if (pnBaoCaoMenu.Visible == true)
-            {
-                pnBaoCaoMenu.Visible = false;
-            }
+           
         }
 
         private void hienSubMenu(Panel sulPanel)
@@ -85,92 +75,14 @@ namespace BTL_QLNhaTro
             pnChildFrom.Tag = childForm;
             childForm.Show();
         }
-        //
-        private void btnHoaDon_Click(object sender, EventArgs e)
-        {
-            hienSubMenu(pnHoaDonMenu);
-        }
-
-        private void btnSanPham_Click(object sender, EventArgs e)
-        {
-            hienSubMenu(pnSanPhamMenu);
-        }
-
-        private void btnHoaDonBan_Click(object sender, EventArgs e)
-        {
-            this.Width = 1000;
-            this.Height = 540;
-            frmHoaDonBan nhap=new frmHoaDonBan(pnChildFrom,tenNguoiDung,maNguoiDung);
-            moChildForm(nhap);
-            anSubMenu();
-        }
-
-
-        //
-        private void btnHoaDonNhap_Click(object sender, EventArgs e)
-        {
-            this.Width = 1000;
-            this.Height = 540;
-            frmHoaDonNhap nhap = new frmHoaDonNhap(pnChildFrom, tenNguoiDung, maNguoiDung);
-            moChildForm(nhap);
-            anSubMenu();
-        }
-
-        private void btnDSSanPham_Click(object sender, EventArgs e)
-        {
-            this.Width = 1180;
-            this.Height = 600;
-            frmQLSanPham nhap = new frmQLSanPham();
-            moChildForm(nhap);
-            anSubMenu();
-        }
-
-        private void btnLoaiSP_Click(object sender, EventArgs e)
-        {
-            this.Width = 900;
-            this.Height = 500;
-            frmQLLoaiSanPham nhap = new frmQLLoaiSanPham();
-            moChildForm(nhap);
-            anSubMenu();
-        }
-
-        private void btnNhaCC_Click(object sender, EventArgs e)
-        {
-            this.Width = 1000;
-            this.Height = 540;
-            frmQLNhaCungCap nhap = new frmQLNhaCungCap();
-            moChildForm(nhap);
-            anSubMenu();
-        }
-
-        
-
         private void btnTrangchu_Click(object sender, EventArgs e)
         {
             if(activeForm != null)
             {
                 activeForm.Close();
-            }
-            
+            }         
         }
 
-        private void btnKhachHang_Click(object sender, EventArgs e)
-        {
-            this.Width = 1000;
-            this.Height = 540;
-            frmKhachHang nhap = new frmKhachHang();
-            moChildForm(nhap);
-            anSubMenu();
-        }
-
-        private void btnNhanvien_Click(object sender, EventArgs e)
-        {
-            this.Width = 1000;
-            this.Height = 540;
-            frmQLNhanVien nhap = new frmQLNhanVien(pnChildFrom);
-            moChildForm(nhap);
-            anSubMenu();
-        }
 
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
@@ -180,24 +92,12 @@ namespace BTL_QLNhaTro
             this.Close();
         }
 
-        private void btnBaoCao_Click(object sender, EventArgs e)
+        private void btnToaNha_Click(object sender, EventArgs e)
         {
-            hienSubMenu(pnBaoCaoMenu);
-        }
-        private void btnBCHoaDonBan_Click(object sender, EventArgs e)
-        {
-            this.Width = 1050;
-            this.Height = 580;
-            frmReportDanhThu reportDanhThu = new frmReportDanhThu();
-            moChildForm(reportDanhThu);
-            anSubMenu();
-        }
-        private void btnBCSanPham_Click(object sender, EventArgs e)
-        {
-            this.Width = 1050;
-            this.Height = 580;
-            frmReportSanPhamSapHet reportSanPham = new frmReportSanPhamSapHet();
-            moChildForm(reportSanPham);
+            this.Width = 1000;
+            this.Height = 540;
+            frmToaNha nhap = new frmToaNha(this.userId);
+            moChildForm(nhap);
             anSubMenu();
         }
     }

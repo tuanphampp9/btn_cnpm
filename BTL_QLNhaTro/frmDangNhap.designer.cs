@@ -47,10 +47,9 @@ namespace BTL_QLNhaTro
             // linkSignUp
             // 
             this.linkSignUp.AutoSize = true;
-            this.linkSignUp.Location = new System.Drawing.Point(371, 314);
-            this.linkSignUp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.linkSignUp.Location = new System.Drawing.Point(495, 386);
             this.linkSignUp.Name = "linkSignUp";
-            this.linkSignUp.Size = new System.Drawing.Size(47, 13);
+            this.linkSignUp.Size = new System.Drawing.Size(60, 17);
             this.linkSignUp.TabIndex = 14;
             this.linkSignUp.TabStop = true;
             this.linkSignUp.Text = "Đăng ký";
@@ -59,10 +58,9 @@ namespace BTL_QLNhaTro
             // linkForgetPassword
             // 
             this.linkForgetPassword.AutoSize = true;
-            this.linkForgetPassword.Location = new System.Drawing.Point(171, 314);
-            this.linkForgetPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.linkForgetPassword.Location = new System.Drawing.Point(228, 386);
             this.linkForgetPassword.Name = "linkForgetPassword";
-            this.linkForgetPassword.Size = new System.Drawing.Size(80, 13);
+            this.linkForgetPassword.Size = new System.Drawing.Size(105, 17);
             this.linkForgetPassword.TabIndex = 13;
             this.linkForgetPassword.TabStop = true;
             this.linkForgetPassword.Text = "Quên mật khẩu";
@@ -71,10 +69,10 @@ namespace BTL_QLNhaTro
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
-            this.pictureBoxLogo.Location = new System.Drawing.Point(208, 37);
-            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(277, 46);
+            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(168, 137);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(224, 169);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxLogo.TabIndex = 12;
             this.pictureBoxLogo.TabStop = false;
@@ -83,45 +81,50 @@ namespace BTL_QLNhaTro
             // 
             this.btnLogin.AutoSize = true;
             this.btnLogin.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnLogin.Location = new System.Drawing.Point(260, 277);
+            this.btnLogin.Location = new System.Drawing.Point(347, 341);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 23);
+            this.btnLogin.Size = new System.Drawing.Size(100, 28);
             this.btnLogin.TabIndex = 9;
-            this.btnLogin.Text = "Login";
+            this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // lbPassword
             // 
             this.lbPassword.AutoSize = true;
-            this.lbPassword.Location = new System.Drawing.Point(180, 240);
+            this.lbPassword.Location = new System.Drawing.Point(240, 295);
+            this.lbPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbPassword.Name = "lbPassword";
-            this.lbPassword.Size = new System.Drawing.Size(52, 13);
+            this.lbPassword.Size = new System.Drawing.Size(66, 17);
             this.lbPassword.TabIndex = 11;
             this.lbPassword.Text = "Mật khẩu";
             // 
             // lbUsername
             // 
             this.lbUsername.AutoSize = true;
-            this.lbUsername.Location = new System.Drawing.Point(181, 193);
+            this.lbUsername.Location = new System.Drawing.Point(241, 238);
+            this.lbUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbUsername.Name = "lbUsername";
-            this.lbUsername.Size = new System.Drawing.Size(73, 13);
+            this.lbUsername.Size = new System.Drawing.Size(95, 17);
             this.lbUsername.TabIndex = 10;
             this.lbUsername.Text = "Tên tài khoản";
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(260, 237);
+            this.txtPassword.Location = new System.Drawing.Point(347, 292);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(134, 20);
+            this.txtPassword.Size = new System.Drawing.Size(177, 22);
             this.txtPassword.TabIndex = 8;
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(260, 190);
+            this.txtUserName.Location = new System.Drawing.Point(347, 234);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(4);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(134, 20);
+            this.txtUserName.Size = new System.Drawing.Size(177, 22);
             this.txtUserName.TabIndex = 7;
             // 
             // errorProviderCheckLogin
@@ -130,9 +133,9 @@ namespace BTL_QLNhaTro
             // 
             // frmDangNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.linkSignUp);
             this.Controls.Add(this.linkForgetPassword);
             this.Controls.Add(this.pictureBoxLogo);
@@ -141,10 +144,10 @@ namespace BTL_QLNhaTro
             this.Controls.Add(this.lbUsername);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUserName);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Đăng Nhập";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderCheckLogin)).EndInit();
             this.ResumeLayout(false);

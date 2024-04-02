@@ -133,11 +133,11 @@
     <Compile Include="frmHoaDonBan.Designer.cs">
       <DependentUpon>frmHoaDonBan.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmKhachHang.cs">
+    <Compile Include="frmToaNha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmKhachHang.Designer.cs">
-      <DependentUpon>frmKhachHang.cs</DependentUpon>
+    <Compile Include="frmToaNha.Designer.cs">
+      <DependentUpon>frmToaNha.cs</DependentUpon>
     </Compile>
     <Compile Include="frmReportDanhThu.cs">
       <SubType>Form</SubType>
@@ -219,8 +219,8 @@
     <EmbeddedResource Include="frmHoaDonBan.resx">
       <DependentUpon>frmHoaDonBan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmKhachHang.resx">
-      <DependentUpon>frmKhachHang.cs</DependentUpon>
+    <EmbeddedResource Include="frmToaNha.resx">
+      <DependentUpon>frmToaNha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmReportDanhThu.resx">
       <DependentUpon>frmReportDanhThu.cs</DependentUpon>
