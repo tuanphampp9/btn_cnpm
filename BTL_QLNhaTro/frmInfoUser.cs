@@ -17,23 +17,23 @@ namespace BTL_QLNhaTro
         string constr = ConfigurationManager.ConnectionStrings["db_QLNhaTro"].ConnectionString;
         clXuLyData commonFunction = new clXuLyData();
         public int userId;
-        public string sVaiTro;
-        public frmInfoUser(int userId, string sVaiTro)
+        public int role;
+        public frmInfoUser(int userId, int role)
         {
             this.userId = userId;
-            this.sVaiTro = sVaiTro;
+            this.role = role;
             InitializeComponent();
         }
 
         private void frmInfoUser_Load(object sender, EventArgs e)
         {
-            if(sVaiTro=="Chu tro")
+            if(this.role==1)
             {
-                string sqlQuery = $"select tblChuToa.* from tblNguoiDung inner join tblChuToa on tblNguoiDung.FK_ChuToa_id = tblChuToa.PK_Id where PK_Id = {this.userId}";
+                string sqlQuery = $"select tblChuToa.* from tblNguoiDung inner join tblChuToa on tblNguoiDung.PK_User_Id = tblChuToa.PK_Id where PK_Id = {this.userId}";
                 handleGetInfo(sqlQuery);
-            }else if(sVaiTro=="Khách thuê")
+            }else if(this.role==0)
             {
-                string sqlQuery = $"select tblKhachHang.* from tblNguoiDung inner join tblKhachHang on tblNguoiDung.FK_KhachHang_id = tblKhachHang.PK_Id where PK_Id = {this.userId}";
+                string sqlQuery = $"select tblKhachHang.* from tblNguoiDung inner join tblKhachHang on tblNguoiDung.PK_User_Id = tblKhachHang.PK_Id where PK_Id = {this.userId}";
                 handleGetInfo(sqlQuery);
             }
             

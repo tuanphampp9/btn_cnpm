@@ -50,7 +50,7 @@ namespace BTL_QLNhaTro
                     cmd.Parameters.AddWithValue("@email", IsValidEmail(txtUsername.Text)?txtUsername.Text:"");
                     cmd.Parameters.AddWithValue("@sdt", IsValidPhoneNumber(txtUsername.Text)?txtUsername.Text:"");
                     cmd.Parameters.AddWithValue("@password", txtPassword.Text); 
-                    cmd.Parameters.AddWithValue("@role", "Chu tro");
+                    cmd.Parameters.AddWithValue("@role", 1);
                     cnn.Open();
                     int i = cmd.ExecuteNonQuery();
                     cnn.Close();

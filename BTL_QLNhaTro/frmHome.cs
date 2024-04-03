@@ -13,13 +13,13 @@ namespace BTL_QLNhaTro
     public partial class frmHome : Form
     {
         private string userName;
-        private string role;
+        private int role;
         private int userId;
-        public frmHome(string user_name,string fk_ChuToa_id, string fk_KhachHang_id, string role)
+        public frmHome(string user_name,int userId, int role)
         {
             this.userName = user_name;
             this.role = role;
-            this.userId = fk_ChuToa_id=="" ? int.Parse(fk_KhachHang_id) : int.Parse(fk_ChuToa_id);
+            this.userId = userId;
             this.role = role;
             InitializeComponent();
             datSubMenu();
@@ -29,7 +29,7 @@ namespace BTL_QLNhaTro
         // Thiết lập menu
         private void datSubMenu()
         {
-            if(this.role=="Khách thuê")
+            if(this.role==0)
             {
                 pnToaNha.Visible = false;
             }

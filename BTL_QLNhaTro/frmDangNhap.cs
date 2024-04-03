@@ -54,7 +54,7 @@ namespace BTL_QLNhaTro
                     da.Fill(tblNguoiDung);
                     if (tblNguoiDung.Rows.Count > 0)
                     {
-                        frmHome formHome = new frmHome(tblNguoiDung.Rows[0].Field<string>("sTenDangNhap"), tblNguoiDung.Rows[0]["FK_ChuToa_id"].ToString(), tblNguoiDung.Rows[0]["FK_KhachHang_id"].ToString(), tblNguoiDung.Rows[0]["sVaiTro"].ToString());
+                        frmHome formHome = new frmHome(tblNguoiDung.Rows[0].Field<string>("sTenDangNhap"), tblNguoiDung.Rows[0].Field<int>("PK_User_Id"), tblNguoiDung.Rows[0].Field<int>("iVaiTro"));
                         this.Visible = false;
                         formHome.ShowDialog();
                         this.Close();
