@@ -12,34 +12,27 @@ namespace BTL_QLNhaTro
 {
     public partial class frmHome : Form
     {
-        private string fullName;
+        private string userName;
         private string role;
         private int userId;
-        public frmHome(string full_name,int user_id, string role)
+        public frmHome(string user_name,string fk_ChuToa_id, string fk_KhachHang_id, string role)
         {
-            this.fullName = full_name;
+            this.userName = user_name;
             this.role = role;
-            this.userId = user_id;
+            this.userId = fk_ChuToa_id=="" ? int.Parse(fk_KhachHang_id) : int.Parse(fk_ChuToa_id);
             this.role = role;
             InitializeComponent();
             datSubMenu();
-            lbFullName.Text = "Tên: " + fullName;
+            lbFullName.Text = "Tên: " + userName;
         }
 
         // Thiết lập menu
         private void datSubMenu()
         {
-            /*pnHoaDonMenu.Visible = false;
-            pnSanPhamMenu.Visible = false;
-            pnBaoCaoMenu.Visible = false;
-            
-            if (vaiTro=="Khách thuê")
+            if(this.role=="Khách thuê")
             {
-                btnPhongThue.Visible = false;
-                pnHoaDonMenu.Height = 30;
-                btnHoaDonNhap.Visible = false;
-                btnBaoCao.Visible = false;
-            }*/
+                pnToaNha.Visible = false;
+            }
         }
 
         private void anSubMenu()
@@ -97,6 +90,15 @@ namespace BTL_QLNhaTro
             this.Width = 1000;
             this.Height = 540;
             frmToaNha nhap = new frmToaNha(this.userId);
+            moChildForm(nhap);
+            anSubMenu();
+        }
+
+        private void btnDetailAccount_Click(object sender, EventArgs e)
+        {
+            this.Width = 1000;
+            this.Height = 540;
+            frmInfoUser nhap = new frmInfoUser(this.userId, this.role);
             moChildForm(nhap);
             anSubMenu();
         }

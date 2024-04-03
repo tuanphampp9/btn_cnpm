@@ -49,12 +49,12 @@ namespace BTL_QLNhaTro
             {
                 using (SqlConnection cnn = new SqlConnection(constr))
                 {
-                    SqlDataAdapter da = new SqlDataAdapter($"select * from tblNguoiDung inner join tblChuToa on tblNguoiDung.FK_ChuToa_id = tblChuToa.PK_Id where sTenDangNhap='{txtUserName.Text}' and sMatKhau='{txtPassword.Text}'", cnn);
+                    SqlDataAdapter da = new SqlDataAdapter($"select * from tblNguoiDung where sTenDangNhap='{txtUserName.Text}' and sMatKhau='{txtPassword.Text}'", cnn);
                     DataTable tblNguoiDung = new DataTable();
                     da.Fill(tblNguoiDung);
                     if (tblNguoiDung.Rows.Count > 0)
                     {
-                        frmHome formHome = new frmHome(tblNguoiDung.Rows[0].Field<string>("sHoTen"), tblNguoiDung.Rows[0].Field<int>("PK_Id"), tblNguoiDung.Rows[0]["sVaiTro"].ToString());
+                        frmHome formHome = new frmHome(tblNguoiDung.Rows[0].Field<string>("sTenDangNhap"), tblNguoiDung.Rows[0]["FK_ChuToa_id"].ToString(), tblNguoiDung.Rows[0]["FK_KhachHang_id"].ToString(), tblNguoiDung.Rows[0]["sVaiTro"].ToString());
                         this.Visible = false;
                         formHome.ShowDialog();
                         this.Close();

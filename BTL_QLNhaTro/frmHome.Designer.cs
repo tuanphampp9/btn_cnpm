@@ -32,9 +32,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnTaiSan = new System.Windows.Forms.Button();
             this.btnDangXuat = new System.Windows.Forms.Button();
-            this.btnTaiKhoan = new System.Windows.Forms.Button();
+            this.btnDetailAccount = new System.Windows.Forms.Button();
             this.btnPhongThue = new System.Windows.Forms.Button();
-            this.btnToaNha = new System.Windows.Forms.Button();
+            this.pnToaNha = new System.Windows.Forms.Button();
             this.btnTrangchu = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,9 +52,9 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel1.Controls.Add(this.btnTaiSan);
             this.panel1.Controls.Add(this.btnDangXuat);
-            this.panel1.Controls.Add(this.btnTaiKhoan);
+            this.panel1.Controls.Add(this.btnDetailAccount);
             this.panel1.Controls.Add(this.btnPhongThue);
-            this.panel1.Controls.Add(this.btnToaNha);
+            this.panel1.Controls.Add(this.pnToaNha);
             this.panel1.Controls.Add(this.btnTrangchu);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
@@ -89,7 +89,7 @@
             this.btnDangXuat.FlatAppearance.BorderSize = 0;
             this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangXuat.ForeColor = System.Drawing.Color.Black;
+            this.btnDangXuat.ForeColor = System.Drawing.Color.White;
             this.btnDangXuat.Location = new System.Drawing.Point(0, 580);
             this.btnDangXuat.Margin = new System.Windows.Forms.Padding(4);
             this.btnDangXuat.Name = "btnDangXuat";
@@ -99,23 +99,23 @@
             this.btnDangXuat.UseVisualStyleBackColor = true;
             this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
-            // btnTaiKhoan
+            // btnDetailAccount
             // 
-            this.btnTaiKhoan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTaiKhoan.FlatAppearance.BorderSize = 0;
-            this.btnTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaiKhoan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnTaiKhoan.Location = new System.Drawing.Point(0, 221);
-            this.btnTaiKhoan.Margin = new System.Windows.Forms.Padding(4);
-            this.btnTaiKhoan.Name = "btnTaiKhoan";
-            this.btnTaiKhoan.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btnTaiKhoan.Size = new System.Drawing.Size(240, 49);
-            this.btnTaiKhoan.TabIndex = 13;
-            this.btnTaiKhoan.Text = "Tài khoản";
-            this.btnTaiKhoan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTaiKhoan.UseVisualStyleBackColor = true;
-            this.btnTaiKhoan.Visible = false;
+            this.btnDetailAccount.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDetailAccount.FlatAppearance.BorderSize = 0;
+            this.btnDetailAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDetailAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDetailAccount.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDetailAccount.Location = new System.Drawing.Point(0, 221);
+            this.btnDetailAccount.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDetailAccount.Name = "btnDetailAccount";
+            this.btnDetailAccount.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnDetailAccount.Size = new System.Drawing.Size(240, 49);
+            this.btnDetailAccount.TabIndex = 13;
+            this.btnDetailAccount.Text = "Thông tin tài khoản";
+            this.btnDetailAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDetailAccount.UseVisualStyleBackColor = true;
+            this.btnDetailAccount.Click += new System.EventHandler(this.btnDetailAccount_Click);
             // 
             // btnPhongThue
             // 
@@ -134,23 +134,23 @@
             this.btnPhongThue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPhongThue.UseVisualStyleBackColor = true;
             // 
-            // btnToaNha
+            // pnToaNha
             // 
-            this.btnToaNha.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnToaNha.FlatAppearance.BorderSize = 0;
-            this.btnToaNha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnToaNha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnToaNha.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnToaNha.Location = new System.Drawing.Point(0, 123);
-            this.btnToaNha.Margin = new System.Windows.Forms.Padding(4);
-            this.btnToaNha.Name = "btnToaNha";
-            this.btnToaNha.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btnToaNha.Size = new System.Drawing.Size(240, 49);
-            this.btnToaNha.TabIndex = 4;
-            this.btnToaNha.Text = "Toà nhà";
-            this.btnToaNha.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnToaNha.UseVisualStyleBackColor = true;
-            this.btnToaNha.Click += new System.EventHandler(this.btnToaNha_Click);
+            this.pnToaNha.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnToaNha.FlatAppearance.BorderSize = 0;
+            this.pnToaNha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pnToaNha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnToaNha.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pnToaNha.Location = new System.Drawing.Point(0, 123);
+            this.pnToaNha.Margin = new System.Windows.Forms.Padding(4);
+            this.pnToaNha.Name = "pnToaNha";
+            this.pnToaNha.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.pnToaNha.Size = new System.Drawing.Size(240, 49);
+            this.pnToaNha.TabIndex = 4;
+            this.pnToaNha.Text = "Toà nhà";
+            this.pnToaNha.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pnToaNha.UseVisualStyleBackColor = true;
+            this.pnToaNha.Click += new System.EventHandler(this.btnToaNha_Click);
             // 
             // btnTrangchu
             // 
@@ -250,7 +250,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmHome";
+            this.Text = "Trang chủ";
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -266,11 +266,11 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnPhongThue;
-        private System.Windows.Forms.Button btnToaNha;
+        private System.Windows.Forms.Button pnToaNha;
         private System.Windows.Forms.Button btnTrangchu;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnDangXuat;
-        private System.Windows.Forms.Button btnTaiKhoan;
+        private System.Windows.Forms.Button btnDetailAccount;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lbFullName;
         private System.Windows.Forms.Panel pnChildFrom;
