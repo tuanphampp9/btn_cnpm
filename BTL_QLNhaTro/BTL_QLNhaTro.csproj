@@ -73,6 +73,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clXuLyData.cs" />
+    <Compile Include="frmChiTietPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChiTietPhong.Designer.cs">
+      <DependentUpon>frmChiTietPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHoaDonNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +195,9 @@
       <DependentUpon>rpSanPham.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="frmChiTietPhong.resx">
+      <DependentUpon>frmChiTietPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHoaDonNhap.resx">
       <DependentUpon>frmHoaDonNhap.cs</DependentUpon>
     </EmbeddedResource>
