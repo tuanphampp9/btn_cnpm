@@ -55,7 +55,7 @@ namespace BTL_QLNhaTro
         {
             if (txtAddress.Text=="" || txtBuildingName.Text=="")
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin ");
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin tên toà nhà và địa chỉ để thêm");
             }    
             else
             {
@@ -103,15 +103,12 @@ namespace BTL_QLNhaTro
             string address = txtAddress.Text.ToString().Trim();
 
             int kq = editBuilding(this.buildingId, buildingName, address);
-            if (kq > 0)
-            {
-                dtgvToaNha.DataSource = commonFunction.Lay_DataTable($"select PK_MaToa, sTenToa, sDiaChi from tblToaNha where FK_User_id='{this.userId}'", "tblToaNha");
-
-            }
-            else
+            if (kq < 0)
             {
                 MessageBox.Show("Sửa không thành công!");
+                return;
             }
+            dtgvToaNha.DataSource = commonFunction.Lay_DataTable($"select PK_MaToa, sTenToa, sDiaChi from tblToaNha where FK_User_id='{this.userId}'", "tblToaNha");
             r_form();
         }
 

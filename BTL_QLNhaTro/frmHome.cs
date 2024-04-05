@@ -98,7 +98,7 @@ namespace BTL_QLNhaTro
         {
             this.Width = 1000;
             this.Height = 540;
-            frmInfoUser nhap = new frmInfoUser(this.userId, this.role);
+            frmInfoUser nhap = new frmInfoUser(this.userId, this.userName, this.role);
             moChildForm(nhap);
             anSubMenu();
         }

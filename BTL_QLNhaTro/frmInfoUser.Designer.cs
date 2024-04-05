@@ -149,6 +149,7 @@ namespace BTL_QLNhaTro
             this.btnSave.TabIndex = 31;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnChangePassword
             // 
