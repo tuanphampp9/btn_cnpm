@@ -77,7 +77,6 @@ namespace BTL_QLNhaTro
 
         public int editBuilding(int buildingId, string buildingName, string address)
         {
-
             string sqlUpdate = $"UPDATE tblToaNha SET sTenToa = N'{buildingName}', sDiaChi = N'{address}' WHERE PK_MaToa = {buildingId}";
             using (SqlConnection conn = new SqlConnection(constr))
             {

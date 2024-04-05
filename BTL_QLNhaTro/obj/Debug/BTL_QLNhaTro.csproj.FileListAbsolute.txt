@@ -94,3 +94,4 @@ D:\tài liệu học tập\c#\BTL_QLNhaTro\BTL_QLNhaTro\obj\Debug\BTL_QLNhaTro.e
 D:\tài liệu học tập\c#\BTL_QLNhaTro\BTL_QLNhaTro\obj\Debug\BTL_QLNhaTro.pdb
 D:\tài liệu học tập\c#\BTL_QLNhaTro\BTL_QLNhaTro\obj\Debug\BTL_QLNhaTro.frmToaNha.resources
 D:\tài liệu học tập\c#\BTL_QLNhaTro\BTL_QLNhaTro\obj\Debug\BTL_QLNhaTro.frmInfoUser.resources
+D:\tài liệu học tập\c#\BTL_QLNhaTro\BTL_QLNhaTro\obj\Debug\BTL_QLNhaTro.frmChangePassword.resources
