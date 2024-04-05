@@ -73,6 +73,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clXuLyData.cs" />
+    <Compile Include="frmTaiSan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTaiSan.Designer.cs">
+      <DependentUpon>frmTaiSan.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmTaiSan.resx">
+      <DependentUpon>frmTaiSan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmChangePassword.resx">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
     </EmbeddedResource>
