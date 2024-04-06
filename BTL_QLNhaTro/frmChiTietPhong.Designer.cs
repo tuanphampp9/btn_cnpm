@@ -31,6 +31,10 @@ namespace BTL_QLNhaTro
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvTaiSanPhong = new System.Windows.Forms.DataGridView();
+            this.clTenTaiSan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clTinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clViTri = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,10 +48,6 @@ namespace BTL_QLNhaTro
             this.txtDienTich = new System.Windows.Forms.TextBox();
             this.txtSoNguoi = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.clTenTaiSan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clTinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clViTri = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtTienThue = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
@@ -79,6 +79,34 @@ namespace BTL_QLNhaTro
             this.dgvTaiSanPhong.ReadOnly = true;
             this.dgvTaiSanPhong.Size = new System.Drawing.Size(720, 207);
             this.dgvTaiSanPhong.TabIndex = 0;
+            // 
+            // clTenTaiSan
+            // 
+            this.clTenTaiSan.DataPropertyName = "sTenTaiSan";
+            this.clTenTaiSan.HeaderText = "Tên tài sản";
+            this.clTenTaiSan.Name = "clTenTaiSan";
+            this.clTenTaiSan.ReadOnly = true;
+            // 
+            // clSoLuong
+            // 
+            this.clSoLuong.DataPropertyName = "iSoLuong";
+            this.clSoLuong.HeaderText = "Số lương";
+            this.clSoLuong.Name = "clSoLuong";
+            this.clSoLuong.ReadOnly = true;
+            // 
+            // clTinhTrang
+            // 
+            this.clTinhTrang.DataPropertyName = "sTinhTrang";
+            this.clTinhTrang.HeaderText = "Tình trang";
+            this.clTinhTrang.Name = "clTinhTrang";
+            this.clTinhTrang.ReadOnly = true;
+            // 
+            // clViTri
+            // 
+            this.clViTri.DataPropertyName = "sViTri";
+            this.clViTri.HeaderText = "Vị trí";
+            this.clViTri.Name = "clViTri";
+            this.clViTri.ReadOnly = true;
             // 
             // label1
             // 
@@ -139,6 +167,7 @@ namespace BTL_QLNhaTro
             // 
             this.txtToaNha.Location = new System.Drawing.Point(217, 61);
             this.txtToaNha.Name = "txtToaNha";
+            this.txtToaNha.ReadOnly = true;
             this.txtToaNha.Size = new System.Drawing.Size(100, 20);
             this.txtToaNha.TabIndex = 7;
             // 
@@ -146,6 +175,7 @@ namespace BTL_QLNhaTro
             // 
             this.txtPhong.Location = new System.Drawing.Point(217, 90);
             this.txtPhong.Name = "txtPhong";
+            this.txtPhong.ReadOnly = true;
             this.txtPhong.Size = new System.Drawing.Size(100, 20);
             this.txtPhong.TabIndex = 8;
             // 
@@ -153,6 +183,7 @@ namespace BTL_QLNhaTro
             // 
             this.txtTang.Location = new System.Drawing.Point(217, 119);
             this.txtTang.Name = "txtTang";
+            this.txtTang.ReadOnly = true;
             this.txtTang.Size = new System.Drawing.Size(100, 20);
             this.txtTang.TabIndex = 9;
             // 
@@ -160,6 +191,7 @@ namespace BTL_QLNhaTro
             // 
             this.txtTinhTrang.Location = new System.Drawing.Point(539, 58);
             this.txtTinhTrang.Name = "txtTinhTrang";
+            this.txtTinhTrang.ReadOnly = true;
             this.txtTinhTrang.Size = new System.Drawing.Size(100, 20);
             this.txtTinhTrang.TabIndex = 10;
             // 
@@ -167,6 +199,7 @@ namespace BTL_QLNhaTro
             // 
             this.txtDienTich.Location = new System.Drawing.Point(539, 89);
             this.txtDienTich.Name = "txtDienTich";
+            this.txtDienTich.ReadOnly = true;
             this.txtDienTich.Size = new System.Drawing.Size(100, 20);
             this.txtDienTich.TabIndex = 11;
             // 
@@ -174,6 +207,7 @@ namespace BTL_QLNhaTro
             // 
             this.txtSoNguoi.Location = new System.Drawing.Point(539, 120);
             this.txtSoNguoi.Name = "txtSoNguoi";
+            this.txtSoNguoi.ReadOnly = true;
             this.txtSoNguoi.Size = new System.Drawing.Size(100, 20);
             this.txtSoNguoi.TabIndex = 12;
             // 
@@ -187,38 +221,11 @@ namespace BTL_QLNhaTro
             this.label7.TabIndex = 13;
             this.label7.Text = "Chi tiết phòng trọ";
             // 
-            // clTenTaiSan
-            // 
-            this.clTenTaiSan.DataPropertyName = "sTenTaiSan";
-            this.clTenTaiSan.HeaderText = "Tên tài sản";
-            this.clTenTaiSan.Name = "clTenTaiSan";
-            this.clTenTaiSan.ReadOnly = true;
-            // 
-            // clSoLuong
-            // 
-            this.clSoLuong.DataPropertyName = "iSoLuong";
-            this.clSoLuong.HeaderText = "Số lương";
-            this.clSoLuong.Name = "clSoLuong";
-            this.clSoLuong.ReadOnly = true;
-            // 
-            // clTinhTrang
-            // 
-            this.clTinhTrang.DataPropertyName = "sTinhTrang";
-            this.clTinhTrang.HeaderText = "Tình trang";
-            this.clTinhTrang.Name = "clTinhTrang";
-            this.clTinhTrang.ReadOnly = true;
-            // 
-            // clViTri
-            // 
-            this.clViTri.DataPropertyName = "sViTri";
-            this.clViTri.HeaderText = "Vị trí";
-            this.clViTri.Name = "clViTri";
-            this.clViTri.ReadOnly = true;
-            // 
             // txtTienThue
             // 
             this.txtTienThue.Location = new System.Drawing.Point(217, 149);
             this.txtTienThue.Name = "txtTienThue";
+            this.txtTienThue.ReadOnly = true;
             this.txtTienThue.Size = new System.Drawing.Size(100, 20);
             this.txtTienThue.TabIndex = 15;
             // 
