@@ -262,6 +262,7 @@ namespace BTL_QLNhaTro
             this.Controls.Add(this.groupBox1);
             this.Name = "frmChiTietPhong";
             this.Text = "frmChiTietPhong";
+            this.Load += new System.EventHandler(this.frmCTHB_Ban_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaiSanPhong)).EndInit();
             this.ResumeLayout(false);

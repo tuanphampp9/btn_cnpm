@@ -115,6 +115,12 @@
     <Compile Include="frmInfoUser.Designer.cs">
       <DependentUpon>frmInfoUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmQLPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLPhong.Designer.cs">
+      <DependentUpon>frmQLPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmToaNha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmInfoUser.resx">
       <DependentUpon>frmInfoUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQLPhong.resx">
+      <DependentUpon>frmQLPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmToaNha.resx">
       <DependentUpon>frmToaNha.cs</DependentUpon>

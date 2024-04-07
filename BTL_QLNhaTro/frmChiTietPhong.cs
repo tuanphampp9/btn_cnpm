@@ -9,8 +9,8 @@ namespace BTL_QLNhaTro
     {
         clXuLyData xuLyData =new clXuLyData();
         string constr = ConfigurationManager.ConnectionStrings["db_QLNhaTro"].ConnectionString;
-        private string maPhong = "1";
-        public frmChiTietPhong(string maPhong)
+        private int maPhong ;
+        public frmChiTietPhong(int maPhong)
         {
             InitializeComponent();
             this.maPhong = maPhong;
@@ -18,21 +18,13 @@ namespace BTL_QLNhaTro
         private void frmCTHB_Ban_Load(object sender, EventArgs e)
         {
             string sqlCommand = "SELECT sTenTaiSan,iSoLuong,sTinhTrang,sViTri FROM tblTaiSan WHERE FK_MaPhong = '" + maPhong + "'";
-            dgvTaiSanPhong.DataSource = xuLyData.Lay_DataTable(sqlCommand);
+            dgvTaiSanPhong.DataSource = xuLyData.Lay_DataTable(sqlCommand,"tblTaiSan");
 
             sqlCommand = "SELECT * FROM tblPhong WHERE PK_MaPhong = '" + maPhong + "'";
-            DataTable dataTable = xuLyData.Lay_DataTable(sqlCommand);
+            DataTable dataTable = xuLyData.Lay_DataTable(sqlCommand,"tblPhong");
             DataRow dataRow = dataTable.Rows[0];
 
-            if (!dataRow.IsNull(1))
-            {
-                txtPhong.Text = "Rỗng";
-                txtTang.Text = "Rỗng";
-                txtTienThue.Text = "Rỗng";
-                txtDienTich.Text = "Rỗng";
-                txtSoNguoi.Text = "Rỗng";
-                txtTinhTrang.Text = "Rỗng";
-            }
+
             txtPhong.Text = dataRow["sTenPhong"].ToString();
             txtTang.Text = dataRow["iTang"].ToString();
             txtTienThue.Text = dataRow["fTienThu"].ToString();

@@ -140,3 +140,4 @@ D:\Documents_D\BTL_NMCNPM\btn_cnpm\BTL_QLNhaTro\obj\Debug\BTL_QLNhaTro.csproj.Co
 D:\Documents_D\BTL_NMCNPM\btn_cnpm\BTL_QLNhaTro\obj\Debug\BTL_QLNhaTro.exe
 D:\Documents_D\BTL_NMCNPM\btn_cnpm\BTL_QLNhaTro\obj\Debug\BTL_QLNhaTro.pdb
 D:\Documents_D\BTL_NMCNPM\btn_cnpm\BTL_QLNhaTro\obj\Debug\BTL_QLNhaTro.frmChiTietPhong.resources
+D:\Documents_D\BTL_NMCNPM\btn_cnpm\BTL_QLNhaTro\obj\Debug\BTL_QLNhaTro.frmQLPhong.resources
