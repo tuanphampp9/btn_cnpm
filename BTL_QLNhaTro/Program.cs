@@ -17,6 +17,7 @@ namespace BTL_QLNhaTro
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmDangNhap());
+         
         }
     }
 }
