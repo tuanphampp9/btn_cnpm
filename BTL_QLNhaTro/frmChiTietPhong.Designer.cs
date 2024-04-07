@@ -50,16 +50,28 @@ namespace BTL_QLNhaTro
             this.label7 = new System.Windows.Forms.Label();
             this.txtTienThue = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dgvNguoiThue = new System.Windows.Forms.DataGridView();
+            this.btnTaiSan = new System.Windows.Forms.Button();
+            this.btnNguoiThue = new System.Windows.Forms.Button();
+            this.clHoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clGioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clSDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clMa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaiSanPhong)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNguoiThue)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvTaiSanPhong);
-            this.groupBox1.Location = new System.Drawing.Point(24, 188);
+            this.groupBox1.Location = new System.Drawing.Point(24, 242);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(750, 250);
+            this.groupBox1.Size = new System.Drawing.Size(750, 196);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách tài sản phòng";
@@ -76,10 +88,10 @@ namespace BTL_QLNhaTro
             this.clSoLuong,
             this.clTinhTrang,
             this.clViTri});
-            this.dgvTaiSanPhong.Location = new System.Drawing.Point(15, 19);
+            this.dgvTaiSanPhong.Location = new System.Drawing.Point(6, 19);
             this.dgvTaiSanPhong.Name = "dgvTaiSanPhong";
             this.dgvTaiSanPhong.ReadOnly = true;
-            this.dgvTaiSanPhong.Size = new System.Drawing.Size(720, 207);
+            this.dgvTaiSanPhong.Size = new System.Drawing.Size(720, 119);
             this.dgvTaiSanPhong.TabIndex = 0;
             // 
             // clTenTaiSan
@@ -239,11 +251,108 @@ namespace BTL_QLNhaTro
             this.label8.TabIndex = 14;
             this.label8.Text = "Tiên thuê: ";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dgvNguoiThue);
+            this.groupBox2.Location = new System.Drawing.Point(24, 242);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(750, 196);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Thông tin người thuê";
+            this.groupBox2.Visible = false;
+            // 
+            // dgvNguoiThue
+            // 
+            this.dgvNguoiThue.AllowUserToAddRows = false;
+            this.dgvNguoiThue.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvNguoiThue.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvNguoiThue.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvNguoiThue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNguoiThue.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clHoTen,
+            this.clGioiTinh,
+            this.clNgaySinh,
+            this.clSDT,
+            this.clEmail,
+            this.clMa});
+            this.dgvNguoiThue.Location = new System.Drawing.Point(6, 19);
+            this.dgvNguoiThue.Name = "dgvNguoiThue";
+            this.dgvNguoiThue.ReadOnly = true;
+            this.dgvNguoiThue.Size = new System.Drawing.Size(720, 119);
+            this.dgvNguoiThue.TabIndex = 0;
+            // 
+            // btnTaiSan
+            // 
+            this.btnTaiSan.Location = new System.Drawing.Point(93, 188);
+            this.btnTaiSan.Name = "btnTaiSan";
+            this.btnTaiSan.Size = new System.Drawing.Size(108, 23);
+            this.btnTaiSan.TabIndex = 16;
+            this.btnTaiSan.Text = "Xem Tài Sản";
+            this.btnTaiSan.UseVisualStyleBackColor = true;
+            this.btnTaiSan.Click += new System.EventHandler(this.btnTaiSan_Click);
+            // 
+            // btnNguoiThue
+            // 
+            this.btnNguoiThue.Location = new System.Drawing.Point(625, 188);
+            this.btnNguoiThue.Name = "btnNguoiThue";
+            this.btnNguoiThue.Size = new System.Drawing.Size(108, 23);
+            this.btnNguoiThue.TabIndex = 17;
+            this.btnNguoiThue.Text = "Xem Người Thuê";
+            this.btnNguoiThue.UseVisualStyleBackColor = true;
+            this.btnNguoiThue.Click += new System.EventHandler(this.btnNguoiThue_Click);
+            // 
+            // clHoTen
+            // 
+            this.clHoTen.DataPropertyName = "sHoTen";
+            this.clHoTen.HeaderText = "Họ tên";
+            this.clHoTen.Name = "clHoTen";
+            this.clHoTen.ReadOnly = true;
+            // 
+            // clGioiTinh
+            // 
+            this.clGioiTinh.DataPropertyName = "bGT";
+            this.clGioiTinh.HeaderText = "Giới tính";
+            this.clGioiTinh.Name = "clGioiTinh";
+            this.clGioiTinh.ReadOnly = true;
+            // 
+            // clNgaySinh
+            // 
+            this.clNgaySinh.DataPropertyName = "dNgaySinh";
+            this.clNgaySinh.HeaderText = "Ngày Sinh";
+            this.clNgaySinh.Name = "clNgaySinh";
+            this.clNgaySinh.ReadOnly = true;
+            // 
+            // clSDT
+            // 
+            this.clSDT.DataPropertyName = "sSDT";
+            this.clSDT.HeaderText = "SĐT";
+            this.clSDT.Name = "clSDT";
+            this.clSDT.ReadOnly = true;
+            // 
+            // clEmail
+            // 
+            this.clEmail.DataPropertyName = "sEmail";
+            this.clEmail.HeaderText = "Email";
+            this.clEmail.Name = "clEmail";
+            this.clEmail.ReadOnly = true;
+            // 
+            // clMa
+            // 
+            this.clMa.DataPropertyName = "PK_Id";
+            this.clMa.HeaderText = "Ma";
+            this.clMa.Name = "clMa";
+            this.clMa.ReadOnly = true;
+            this.clMa.Visible = false;
+            // 
             // frmChiTietPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnNguoiThue);
+            this.Controls.Add(this.btnTaiSan);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.txtTienThue);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -265,6 +374,8 @@ namespace BTL_QLNhaTro
             this.Load += new System.EventHandler(this.frmCTHB_Ban_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaiSanPhong)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNguoiThue)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,5 +404,15 @@ namespace BTL_QLNhaTro
         private System.Windows.Forms.DataGridViewTextBoxColumn clViTri;
         private System.Windows.Forms.TextBox txtTienThue;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridView dgvNguoiThue;
+        private System.Windows.Forms.Button btnTaiSan;
+        private System.Windows.Forms.Button btnNguoiThue;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clHoTen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clGioiTinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clNgaySinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clSDT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clEmail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clMa;
     }
 }
