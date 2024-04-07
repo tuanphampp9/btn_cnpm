@@ -108,7 +108,6 @@ namespace BTL_QLNhaTro
             frmChangePassword frmChangePassword = new frmChangePassword(this.userId);
             this.Visible = false;
             frmChangePassword.ShowDialog();
-            this.Close();
         }
     }
 }
