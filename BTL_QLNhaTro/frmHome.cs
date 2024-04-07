@@ -103,6 +103,15 @@ namespace BTL_QLNhaTro
             anSubMenu();
         }
 
+        private void btnTaiSan_Click(object sender, EventArgs e)
+        {
+            this.Width = 1000;
+            this.Height = 540;
+            frmTaiSan nhap = new frmTaiSan(this.userId, this.role);
+            moChildForm(nhap);
+            anSubMenu();
+        }
+
         private void btnPhongThue_Click(object sender, EventArgs e)
         {
             this.Width = 1000;

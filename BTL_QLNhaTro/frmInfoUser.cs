@@ -97,7 +97,6 @@ namespace BTL_QLNhaTro
                     if (i > 0)
                     {
                         MessageBox.Show("Cập nhật thành công");
-                        this.Close();
                     }
                 }
             }

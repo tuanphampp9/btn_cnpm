@@ -244,7 +244,6 @@ namespace BTL_QLNhaTro
                 sqlText = "SELECT * FROM vv_Phong WHERE FK_User_id='" + this.userId + "'";
             }
             dgvPhong.DataSource = xuLyData.Lay_DataTable(sqlText, "vv_Phong");
-            lamMoi();
         }
 
         private void txtDienTich_TextChanged(object sender, EventArgs e)

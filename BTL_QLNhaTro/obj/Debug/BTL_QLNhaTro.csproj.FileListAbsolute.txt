@@ -190,3 +190,4 @@ E:\FITHOU\Nhập môn CNPM\btn_cnpm\BTL_QLNhaTro\obj\Debug\BTL_QLNhaTro.exe
 E:\FITHOU\Nhập môn CNPM\btn_cnpm\BTL_QLNhaTro\obj\Debug\BTL_QLNhaTro.pdb
 E:\FITHOU\Nhập môn CNPM\btn_cnpm\BTL_QLNhaTro\obj\Debug\BTL_QLNhaTro.frmThemKH.resources
 D:\tài liệu học tập\c#\BTL_QLNhaTro\BTL_QLNhaTro\obj\Debug\BTL_QLNhaTro.frmThemKH.resources
+D:\tài liệu học tập\c#\BTL_QLNhaTro\BTL_QLNhaTro\obj\Debug\BTL_QLNhaTro.frmTaiSan.resources
