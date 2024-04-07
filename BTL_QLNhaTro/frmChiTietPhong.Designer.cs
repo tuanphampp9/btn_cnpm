@@ -50,6 +50,7 @@ namespace BTL_QLNhaTro
             this.label7 = new System.Windows.Forms.Label();
             this.txtTienThue = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnThemKH = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaiSanPhong)).BeginInit();
             this.SuspendLayout();
@@ -239,11 +240,22 @@ namespace BTL_QLNhaTro
             this.label8.TabIndex = 14;
             this.label8.Text = "Tiên thuê: ";
             // 
+            // btnThemKH
+            // 
+            this.btnThemKH.Location = new System.Drawing.Point(443, 159);
+            this.btnThemKH.Name = "btnThemKH";
+            this.btnThemKH.Size = new System.Drawing.Size(123, 23);
+            this.btnThemKH.TabIndex = 16;
+            this.btnThemKH.Text = "Thêm khách hàng";
+            this.btnThemKH.UseVisualStyleBackColor = true;
+            this.btnThemKH.Click += new System.EventHandler(this.btnThemKH_Click);
+            // 
             // frmChiTietPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnThemKH);
             this.Controls.Add(this.txtTienThue);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -293,5 +305,6 @@ namespace BTL_QLNhaTro
         private System.Windows.Forms.DataGridViewTextBoxColumn clViTri;
         private System.Windows.Forms.TextBox txtTienThue;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnThemKH;
     }
 }
