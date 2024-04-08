@@ -24,6 +24,15 @@ namespace BTL_QLNhaTro
             this.userId = user_id;
             this.role = role;
             InitializeComponent();
+            if (role == 0)
+            {
+                txtTenTaiSan.Enabled = false;
+                txtSoLuong.Enabled = false;
+                txtViTri.Enabled = false;
+                cbPhong.Enabled = false;
+                cbToaNha.Enabled = false;
+                btnThem.Visible = false;
+            }
         }
 
         string constr = ConfigurationManager.ConnectionStrings["db_QLNhaTro"].ConnectionString;
