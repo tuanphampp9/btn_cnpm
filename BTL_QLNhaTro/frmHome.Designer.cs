@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHome));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDetailAccount = new System.Windows.Forms.Button();
             this.btnTaiSan = new System.Windows.Forms.Button();
             this.btnDangXuat = new System.Windows.Forms.Button();
-            this.btnDetailAccount = new System.Windows.Forms.Button();
             this.btnPhongThue = new System.Windows.Forms.Button();
             this.pnToaNha = new System.Windows.Forms.Button();
             this.btnTrangchu = new System.Windows.Forms.Button();
@@ -48,9 +48,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnDetailAccount);
             this.panel1.Controls.Add(this.btnTaiSan);
             this.panel1.Controls.Add(this.btnDangXuat);
-            this.panel1.Controls.Add(this.btnDetailAccount);
             this.panel1.Controls.Add(this.btnPhongThue);
             this.panel1.Controls.Add(this.pnToaNha);
             this.panel1.Controls.Add(this.btnTrangchu);
@@ -63,6 +63,24 @@
             this.panel1.Size = new System.Drawing.Size(240, 617);
             this.panel1.TabIndex = 0;
             // 
+            // btnDetailAccount
+            // 
+            this.btnDetailAccount.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDetailAccount.FlatAppearance.BorderSize = 0;
+            this.btnDetailAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDetailAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDetailAccount.ForeColor = System.Drawing.Color.Black;
+            this.btnDetailAccount.Location = new System.Drawing.Point(0, 279);
+            this.btnDetailAccount.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDetailAccount.Name = "btnDetailAccount";
+            this.btnDetailAccount.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnDetailAccount.Size = new System.Drawing.Size(240, 49);
+            this.btnDetailAccount.TabIndex = 18;
+            this.btnDetailAccount.Text = "Thông tin tài khoản";
+            this.btnDetailAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDetailAccount.UseVisualStyleBackColor = true;
+            this.btnDetailAccount.Click += new System.EventHandler(this.btnDetailAccount_Click);
+            // 
             // btnTaiSan
             // 
             this.btnTaiSan.Dock = System.Windows.Forms.DockStyle.Top;
@@ -70,16 +88,16 @@
             this.btnTaiSan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTaiSan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTaiSan.ForeColor = System.Drawing.Color.Black;
-            this.btnTaiSan.Location = new System.Drawing.Point(0, 273);
+            this.btnTaiSan.Location = new System.Drawing.Point(0, 225);
             this.btnTaiSan.Margin = new System.Windows.Forms.Padding(4);
             this.btnTaiSan.Name = "btnTaiSan";
             this.btnTaiSan.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btnTaiSan.Size = new System.Drawing.Size(240, 49);
+            this.btnTaiSan.Size = new System.Drawing.Size(240, 54);
             this.btnTaiSan.TabIndex = 17;
             this.btnTaiSan.Text = "Tài sản";
             this.btnTaiSan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTaiSan.UseVisualStyleBackColor = true;
-            this.btnTaiSan.Visible = false;
+            this.btnTaiSan.Click += new System.EventHandler(this.btnTaiSan_Click);
             // 
             // btnDangXuat
             // 
@@ -97,24 +115,6 @@
             this.btnDangXuat.UseVisualStyleBackColor = true;
             this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
-            // btnDetailAccount
-            // 
-            this.btnDetailAccount.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDetailAccount.FlatAppearance.BorderSize = 0;
-            this.btnDetailAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDetailAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDetailAccount.ForeColor = System.Drawing.Color.Black;
-            this.btnDetailAccount.Location = new System.Drawing.Point(0, 224);
-            this.btnDetailAccount.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDetailAccount.Name = "btnDetailAccount";
-            this.btnDetailAccount.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btnDetailAccount.Size = new System.Drawing.Size(240, 49);
-            this.btnDetailAccount.TabIndex = 13;
-            this.btnDetailAccount.Text = "Thông tin tài khoản";
-            this.btnDetailAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDetailAccount.UseVisualStyleBackColor = true;
-            this.btnDetailAccount.Click += new System.EventHandler(this.btnDetailAccount_Click);
-            // 
             // btnPhongThue
             // 
             this.btnPhongThue.Dock = System.Windows.Forms.DockStyle.Top;
@@ -122,7 +122,7 @@
             this.btnPhongThue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPhongThue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPhongThue.ForeColor = System.Drawing.Color.Black;
-            this.btnPhongThue.Location = new System.Drawing.Point(0, 175);
+            this.btnPhongThue.Location = new System.Drawing.Point(0, 176);
             this.btnPhongThue.Margin = new System.Windows.Forms.Padding(4);
             this.btnPhongThue.Name = "btnPhongThue";
             this.btnPhongThue.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
@@ -131,6 +131,7 @@
             this.btnPhongThue.Text = "Phòng thuê";
             this.btnPhongThue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPhongThue.UseVisualStyleBackColor = true;
+            this.btnPhongThue.Click += new System.EventHandler(this.btnPhongThue_Click);
             // 
             // pnToaNha
             // 
@@ -139,7 +140,7 @@
             this.pnToaNha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pnToaNha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnToaNha.ForeColor = System.Drawing.Color.Black;
-            this.pnToaNha.Location = new System.Drawing.Point(0, 126);
+            this.pnToaNha.Location = new System.Drawing.Point(0, 127);
             this.pnToaNha.Margin = new System.Windows.Forms.Padding(4);
             this.pnToaNha.Name = "pnToaNha";
             this.pnToaNha.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
@@ -157,7 +158,7 @@
             this.btnTrangchu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTrangchu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTrangchu.ForeColor = System.Drawing.Color.Black;
-            this.btnTrangchu.Location = new System.Drawing.Point(0, 77);
+            this.btnTrangchu.Location = new System.Drawing.Point(0, 78);
             this.btnTrangchu.Margin = new System.Windows.Forms.Padding(4);
             this.btnTrangchu.Name = "btnTrangchu";
             this.btnTrangchu.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
@@ -175,7 +176,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(240, 77);
+            this.panel3.Size = new System.Drawing.Size(240, 78);
             this.panel3.TabIndex = 1;
             // 
             // panel2
@@ -194,7 +195,7 @@
             this.panel4.Location = new System.Drawing.Point(240, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1072, 77);
+            this.panel4.Size = new System.Drawing.Size(1072, 78);
             this.panel4.TabIndex = 1;
             // 
             // lbFullName
@@ -252,10 +253,10 @@
         private System.Windows.Forms.Button pnToaNha;
         private System.Windows.Forms.Button btnTrangchu;
         private System.Windows.Forms.Button btnDangXuat;
-        private System.Windows.Forms.Button btnDetailAccount;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lbFullName;
         private System.Windows.Forms.Panel pnChildFrom;
         private System.Windows.Forms.Button btnTaiSan;
+        private System.Windows.Forms.Button btnDetailAccount;
     }
 }

@@ -102,5 +102,37 @@ namespace BTL_QLNhaTro
             moChildForm(nhap);
             anSubMenu();
         }
+
+        private void btnTaiSan_Click(object sender, EventArgs e)
+        {
+            this.Width = 1000;
+            this.Height = 540;
+            frmTaiSan nhap = new frmTaiSan(this.userId, this.role);
+            moChildForm(nhap);
+            anSubMenu();
+        }
+
+        private void btnPhongThue_Click(object sender, EventArgs e)
+        {
+            this.Width = 1000;
+            this.Height = 540;
+            if(role == 1)
+            {
+                frmQLPhong frmQLPhong = new frmQLPhong(this.userId);
+                moChildForm(frmQLPhong);
+                anSubMenu();
+            }
+            else
+            {
+                clXuLyData xuLyData = new clXuLyData();
+                string sqlText = $"SELECT * FROM tblPhong WHERE FK_User_id= {userId}";
+                DataTable dataTable = xuLyData.Lay_DataTable(sqlText, "tblPhong");
+                DataRow row = dataTable.Rows[0];
+                frmChiTietPhong frmChiTietPhong = new frmChiTietPhong(int.Parse(row[0].ToString()));
+                moChildForm(frmChiTietPhong);
+                anSubMenu();
+            }
+            
+        }
     }
 }
