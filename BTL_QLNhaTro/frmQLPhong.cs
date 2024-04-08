@@ -44,7 +44,7 @@ namespace BTL_QLNhaTro
             if (viTriChon >= 0)
             {
                
-                DataRow dataRow = dataTable.Rows[viTriChon];
+                DataRow dataRow = dataTable.Rows[e.RowIndex];
                 txtMaPhong.Text = dataRow[0].ToString();
                 txtPhong.Text = dataRow[1].ToString();
                 cbxToaNha.Text = dataRow[2].ToString();
@@ -131,6 +131,7 @@ namespace BTL_QLNhaTro
             txtSoNguoi.Text = "";
             cbxTinhTrang.Text = "";
             viTriChon = -1;
+            eprQLPhong.Clear();
         }
         private int ThemPhong(string maToa,string tenPhong, string tang, string tienThu, string dienTich, string soNguoiTD, string tinhTrang)
         {
@@ -138,7 +139,7 @@ namespace BTL_QLNhaTro
             {
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
-                    string sqlInsert = $"INSERT INTO tblPhong(FK_MaToa,sTenPhong,iTang,fTienThu,fDienTich,iSoNguoiToiDa,sTinhTrang,FK_User_id) values('{maToa}',N'{tenPhong}',{tang}, {tienThu}, {dienTich}, {soNguoiTD}, '{tinhTrang}, '{this.userId}')";
+                    string sqlInsert = $"INSERT INTO tblPhong(FK_MaToa,sTenPhong,iTang,fTienThu,fDienTich,iSoNguoiToiDa,sTinhTrang) values({maToa},N'{tenPhong}',{tang}, {tienThu}, {dienTich}, {soNguoiTD}, N'{tinhTrang}')";
                     cmd.CommandText = sqlInsert;
                     conn.Open();
                     int i = cmd.ExecuteNonQuery();
@@ -155,7 +156,7 @@ namespace BTL_QLNhaTro
             string tienThu = txtTienThue.Text.ToString().Trim();
             string dienTich = txtDienTich.Text.ToString().Trim();
             string soNguoiTD = txtSoNguoi.Text.ToString().Trim();
-            string tinhTrang = cbxTinhTrang.SelectedText.ToString();
+            string tinhTrang = cbxTinhTrang.Text.ToString();
             
             if(maToa == "" || tenPhong == "" || tang == "" || dienTich == "" || tienThu == "" || soNguoiTD == "" || tinhTrang == "" )
             {
@@ -166,7 +167,7 @@ namespace BTL_QLNhaTro
                 int kq = ThemPhong(maToa,tenPhong,tang,tienThu,dienTich,soNguoiTD,tinhTrang);
                 if (kq > 0)
                 {
-                    dgvPhong.DataSource = xuLyData.Lay_DataTable("vv_Phong");
+                    dgvPhong.DataSource = xuLyData.Lay_DataTable(sqlCommand,"vv_Phong");
                     lamMoi();
                 }
                 else
@@ -186,7 +187,7 @@ namespace BTL_QLNhaTro
             string tienThu = txtTienThue.Text.ToString().Trim();
             string dienTich = txtDienTich.Text.ToString().Trim();
             string soNguoiTD = txtSoNguoi.Text.ToString().Trim();
-            /*string tinhTrang = cbxTinhTrang.SelectedValue.ToString().Trim();*/
+            string tinhTrang = cbxTinhTrang.Text.ToString().Trim();
             if (tenPhong.Length != 0)
             {
                 sqlText = sqlText + "sTenPhong LIKE '%" + tenPhong + "%'";
@@ -233,6 +234,17 @@ namespace BTL_QLNhaTro
                 else
                 {
                     sqlText = "SELECT * FROM vv_Phong WHERE fdienTich <=" + dienTich;
+                }
+            }
+            if (tinhTrang.Length != 0)
+            {
+                if (sqlText.Length > 36)
+                {
+                    sqlText = sqlText + " AND sTinhTrang =N'" + tinhTrang+"'";
+                }
+                else
+                {
+                    sqlText = "SELECT * FROM vv_Phong WHERE sTinhTrang =N'" + tinhTrang + "'";
                 }
             }
             if (sqlText.Length > 36)

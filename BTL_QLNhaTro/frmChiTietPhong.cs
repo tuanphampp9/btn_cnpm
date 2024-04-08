@@ -36,7 +36,7 @@ namespace BTL_QLNhaTro
             txtTinhTrang.Text = dataRow["sTinhTrang"].ToString();
             maNguoiT = dataRow["FK_User_id"].ToString();
             this.tinhTrang = dataRow["sTinhTrang"].ToString().Trim();
-
+            btnThemKH.Text = this.tinhTrang == "Đã thuê" ? "Xóa khách hàng" : "Thêm khách hàng";
         }
 
         private void btnTaiSan_Click(object sender, EventArgs e)
@@ -61,8 +61,6 @@ namespace BTL_QLNhaTro
             {
                 MessageBox.Show("Phong chưa có ai thuê");
             }
-            
-            btnThemKH.Text = this.tinhTrang == "Đã thuê" ? "Xóa khách hàng" : "Thêm khách hàng";
         }
 
         private void btnThemKH_Click(object sender, EventArgs e)
